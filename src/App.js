@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+<<<<<<< HEAD
 import Nav from './comp/Nav';
 import Login from './comp/Login';
 import About from './comp/About';
@@ -24,6 +25,21 @@ function App() {
 
     </Routes>
     </>
+=======
+import Login from './components/Login';
+import Register from './components/Register';
+import { Routes, Route } from 'react-router-dom';
+import Context from './Context';
+
+function App() {
+  return (
+    <Context.Provider value={{}}>
+    <Routes>
+      <Route path='/register' element={<Register/>}/>
+      <Route path="/login" element={<Login/>}/>
+    </Routes>
+    </Context.Provider>
+>>>>>>> 76b23a0427cdc62d8f763fa76718b06e905a7e29
   );
 }
 
