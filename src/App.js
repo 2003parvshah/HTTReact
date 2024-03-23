@@ -1,18 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Nav from './components/Nav';
 import Login from './components/Login';
 import Register from './components/Register';
-import { Routes, Route } from 'react-router-dom';
-import Context from './Context';
+import About from './components/About';
+import Courses from './components/Courses';
+import Home from './components/Home';
+
+
+
+import {Routes , Route , Link , NavLink}  from "react-router-dom";
+
 
 function App() {
   return (
-    <Context.Provider value={{}}>
+    <div className=''>
+    <Nav/>
     <Routes>
-      <Route path='/register' element={<Register/>}/>
-      <Route path="/login" element={<Login/>}/>
+    <Route path='/' element = {<Home />}></Route>
+    <Route path = "/login" element = {<Login />}></Route>
+    <Route path = "/courses" element = {< Courses />}></Route>
+    <Route path = "/about" element = {<About />}></Route>
+    <Route path='/register' element={<Register/>}/>
+
+
     </Routes>
-    </Context.Provider>
+    </div>
   );
 }
 
